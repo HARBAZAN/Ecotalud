@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movimiento de tierras e hidrosiembra en toda España | ECOTALUD</title>
+<meta name="description" content="Excavaciones, nivelaciones, perfilado de taludes, hidrosiembra y transporte de tierras con excavadora y dumper en toda España. Pide presupuesto por WhatsApp.">
+<meta name="theme-color" content="#0e0f0c">
+<meta property="og:title" content="Movimiento de tierras e hidrosiembra en toda España">
+<meta property="og:description" content="Excavaciones, taludes, hidrosiembra y transporte de tierras. Presupuesto sin cargo por WhatsApp.">
+<meta property="og:type" content="website">
+
+<!-- Datos para Google (negocio local). Cambia los [CORCHETES] -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ECOTALUD",
+  "description": "Movimiento de tierras, excavaciones, taludes e hidrosiembra",
+  "telephone": "+34607017619",
+  "email": "itopernestoarillo@gmail.com",
+  "areaServed": "ES",
+  "url": "https://ecotalud.com",
+}
+</script>
+
+<style>
+:root{
+  --bg:#0e0f0c; --bg2:#161812; --card:#1b1e16; --line:#2a2e22;
+  --text:#f3f4ef; --muted:#a4a897;
+  --green:#8bd450; --amber:#f2b134;
+  --r:20px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font:400 17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
+section{padding:88px 0}
+h1,h2,h3{line-height:1.08;letter-spacing:-.02em}
+h1{font-size:clamp(2.5rem,9vw,5.2rem);font-weight:800}
+h2{font-size:clamp(1.9rem,6vw,3.2rem);font-weight:750;margin-bottom:14px}
+h3{font-size:1.2rem;font-weight:650;margin-bottom:8px}
+.eyebrow{color:var(--green);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.lead{color:var(--muted);font-size:1.15rem;max-width:34em}
+.grad{background:linear-gradient(90deg,var(--green),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:650;font-size:1rem;transition:transform .25s var(--ease),background .25s;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:#25d366;color:#06220f}
+.btn-ghost{border-color:var(--line);background:rgba(255,255,255,.04);color:var(--text)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* Barra superior */
+header{position:fixed;inset:0 0 auto 0;z-index: index 20;;background:rgba(0, 0, 0, 0.82);-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height: 90px;padding-inline:20px}
+.brand img{display:block;width:auto;height: 100px;object-fit:contain}
+nav{display:none;gap:26px;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--text)}
+.bar .btn{padding:16px 18px;font-size:.9rem}
+@media(min-width:760px){nav{display:flex}}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;position:relative;isolation:isolate;overflow:hidden}
+.hero::before{ /* resplandor animado: solo transform, barato para la GPU */
+  content:"";position:absolute;z-index:-1;width:140vmax;height:140vmax;left:50%;top:40%;
+  translate:-50% -50%;
+  background:radial-gradient(closest-side,rgba(139,212,80,.16),transparent 1%),
+             radial-gradient(closest-side at 70% 30%,rgba(242,177,52,.12),transparent 60%);
+  animation:drift 22s ease-in-out infinite alternate;will-change:transform}
+@keyframes drift{to{transform:rotate(40deg) scale(1.08)}}
+.hero p.lead{margin-top:22px}
+.hero .in>*{opacity:0;transform:translateY(24px);animation:up .9s var(--ease) forwards}
+.hero .in>*:nth-child(2){animation-delay:.12s}
+.hero .in>*:nth-child(3){animation-delay:.24s}
+.hero .in>*:nth-child(4){animation-delay:.36s}
+@keyframes up{to{opacity:1;transform:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.chip{font-size:.85rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+
+/* Revelado al hacer scroll */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* Servicios */
+.grid{display:grid;gap:14px;margin-top:44px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card .ic{width:46px;height:46px;border-radius:14px;background:rgba(139,212,80,.12);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:24px;height:24px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card p{color:var(--muted);font-size:.97rem}
+.card.hi{background:linear-gradient(160deg,#1f2a14,var(--card))}
+
+/* Trabajos */
+.works{background:var(--bg2)}
+.gal{display:grid;gap:12px;margin-top:44px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+.gal figure{position:relative;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:linear-gradient(135deg,#232717,#171a10);border:1px solid var(--line)}
+.gal figure::after{content:attr(data-n);position:absolute;inset:0;display:grid;place-items:center;color:#4a5038;font-size:.9rem}
+.gal-photos{position:absolute;inset:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:2px;z-index:1}
+.gal-photos img{width:100%;height:100%;min-width:0;object-fit:cover}
+.gal figure video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.gal figcaption{position:absolute;left:12px;bottom:10px;z-index:2;font-size:.8rem;background:rgba(14,15,12,.7);padding:4px 10px;border-radius:999px}
+
+/* Cómo trabajamos */
+.steps{display:grid;gap:14px;margin-top:44px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{padding:28px;border-left:2px solid var(--green);background:var(--card);border-radius:0 var(--r) var(--r) 0}
+.step b{display:block;font-size:2.2rem;color:var(--green);margin-bottom:6px}
+.step p{color:var(--muted);font-size:.97rem}
+
+/* Contacto */
+.contact{text-align:center}
+.contact .lead{margin-inline:auto}
+.box{max-width:560px;margin:40px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+label{display:block;font-size:.85rem;color:var(--muted);margin:14px 0 6px}
+label:first-child{margin-top:0}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:#11130e;color:var(--text);font:inherit}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--green);outline-offset:1px}
+.box .btn{width:100%;justify-content:center;margin-top:20px}
+.alt{margin-top:22px;color:var(--muted);font-size:.95rem}
+.alt a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+
+footer{padding:34px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+
+/* Botón flotante WhatsApp */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .25s var(--ease)}
+.fab:active{transform:scale(.92)}
+.fab svg{width:30px;height:30px;fill:#06220f}
+
+/* Simulador 3D */
+[hidden]{display:none!important}
+section[id]{scroll-margin-top:56px}
+.simbox{margin-top:36px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.tabs{display:flex;gap:4px;background:#11130e;border-radius:999px;padding:4px;margin-bottom:12px}
+.tab{flex:1;padding:11px 8px;border:0;border-radius:999px;background:none;color:var(--muted);font-family:inherit;font-weight:600;font-size:.95rem;line-height:1;cursor:pointer;transition:background .25s,color .25s}
+.tab.on{background:var(--green);color:#10200a}
+.stage{position:relative;aspect-ratio:4/3;max-height:78svh;border-radius:14px;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,#33422a,#0e0f0c 78%)}
+@media(max-width:600px){.stage{aspect-ratio:1/1}}
+.stage canvas{width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+.stage canvas:active{cursor:grabbing}
+.views{position:absolute;top:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:6px}
+.views button{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(14,15,12,.72);color:var(--text);font-family:inherit;font-size:.8rem;font-weight:600;cursor:pointer}
+.views button.on{background:var(--green);border-color:var(--green);color:#10200a}
+.hint{position:absolute;left:12px;bottom:10px;font-size:.78rem;color:var(--muted);pointer-events:none;transition:opacity .5s;text-shadow:0 1px 3px #000}
+.nogl{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);font-size:.95rem}
+
+.ctrl{margin-top:10px}
+.sl{display:block;margin:12px 2px 0;color:var(--muted);font-size:.9rem}
+.sl output{float:right;color:var(--text);font-weight:650}
+input[type=range]{padding:0;border:0;background:transparent;accent-color:var(--green);height:30px;margin-top:2px}
+.ctrl select{margin-top:6px}
+.res{display:grid;gap:8px;margin-top:16px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.res div{background:#11130e;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.res b{display:block;font-size:1.35rem;letter-spacing:-.01em}
+.res span{color:var(--muted);font-size:.82rem}
+.simbox .btns{margin-top:18px}
+.simbox .btns .btn{flex:1 1 220px;justify-content:center}
+.fine{color:var(--muted);font-size:.8rem;margin-top:12px}
+
+/* Accesibilidad: sin movimiento */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv,.hero .in>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+  
+
+<header id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#" aria-label="ECOTALUD, inicio"><img src="logo.png" alt="ECOTALUD — Movimiento de suelo"></a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-wa" data-wa href="#">WhatsApp</a>
+  </div>
+</header>
+
+
+<main>
+<section class="hero">
+  <div class="wrap in">
+    <p class="eyebrow">Movimiento de tierras · Trabajamos en Toda España</p>
+    <h1>Movemos tierra.<br><span class="grad">Somos la solucion que necesitas.
+    </span></h1>
+    <p class="lead">Excavaciones, taludes, nivelaciones, transporte con dumper e hidrosiembra. Maquinaria propia y trato directo, sin intermediarios.</p>
+    <div class="btns">
+      <a class="btn btn-wa" data-wa href="#">Pedir presupuesto sin cargo por WhatsApp</a>
+      <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+    </div>
+    <div class="chips">
+      <span class="chip">Excavadora</span><span class="chip">Dumper</span><span class="chip">Hidrosiembra</span><span class="chip">Taludes</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="servicios">
+  <div class="wrap">
+    <p class="eyebrow rv">Servicios</p>
+    <h2 class="rv">Todo lo que se hace con<br>excavadora y dumper.</h2>
+    <p class="lead rv">Si es mover, abrir, nivelar o cubrir tierra, lo hacemos. Y si no está en la lista, pregúntanos.</p>
+
+    <div class="grid">
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>Excavaciones y zanjas</h3>
+        <p>Vaciados, cimentaciones, zanjas para tuberías, drenajes y acometidas.</p>
+      </article>
+      <article class="card hi rv d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg></div>
+        <h3>Hidrosiembra</h3>
+        <p>Cubre y fija taludes y terrenos con vegetación. Evita la erosión y deja la obra con buen aspecto.</p>
+      </article>
+      <article class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 18 21 6"/><path d="M3 18h18"/><path d="M9 14.5 12 18"/></svg></div>
+        <h3>Perfilado de taludes</h3>
+        <p>Emparejamiento y acabado de taludes con la pendiente que necesita tu terreno.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 15h18"/><path d="M3 19h18"/><path d="M5 11l4-4 3 3 4-5 3 3"/></svg></div>
+        <h3>Nivelación y explanaciones</h3>
+        <p>Preparación de parcelas, accesos, plataformas y caminos.</p>
+      </article>
+      <article class="card rv d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 16V8h11v8"/><path d="M13 11h5l4 3v2h-9"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
+        <h3>Transporte de tierras</h3>
+        <p>Carga, acarreo y retirada de tierra y escombros con dumper.</p>
+      </article>
+      <article class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20c4-1 6-5 6-9"/><path d="M10 11c0-4 3-6 7-6"/><path d="M14 20c0-3 2-5 6-5"/></svg></div>
+        <h3>Limpieza y desbroce</h3>
+        <p>Limpieza de parcelas y terrenos para dejarlos listos para construir o cultivar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos" class="works">
+  <div class="wrap">
+    <p class="eyebrow rv">Trabajos realizados</p>
+    <h2 class="rv">Obras reales,<br>resultados reales.</h2>
+    <div class="gal">
+      <!-- Pon tus fotos en una carpeta "fotos" con estos nombres: trabajo-1.jpg ... trabajo-6.jpg -->
+      <figure class="rv" data-n="Foto 1"><img loading="lazy" decoding="async" src="excavacion.jpg" alt="Excavación con excavadora" onerror="this.remove()"><figcaption>Excavación</figcaption></figure>
+      <figure class="rv d1" data-n="Fotos de hidrosiembra"><div class="gal-photos"><img loading="lazy" decoding="async" src="hidro1.jpeg" alt="Hidrosiembra en talud, foto 1" onerror="this.remove()"><img loading="lazy" decoding="async" src="hidro2.jpg" alt="Hidrosiembra en talud, foto 2" onerror="this.remove()"></div><figcaption>Hidrosiembra</figcaption></figure>
+      <figure class="rv d2" data-n="Foto 3"><img loading="lazy" decoding="async" src="talud.jpg" alt="Perfilado de talud" onerror="this.remove()"><figcaption>Talud</figcaption></figure>
+      <figure class="rv d1" data-n="Foto 4"><img loading="lazy" decoding="async" src="nn1.jpg" alt="Nivelación de parcela" onerror="this.remove()"><figcaption>Nivelación</figcaption></figure>
+      <figure class="rv d2" data-n="Foto 5"><img loading="lazy" decoding="async" src="nive2.jpg" alt="Terreno nivelado" onerror="this.remove()"><figcaption>Terreno</figcaption></figure>
+      <figure class="rv d2" data-n="Vídeo de obra terminada"><video controls preload="metadata" playsinline aria-label="Vídeo de obra terminada" onerror="this.remove()"><source src="obrat.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video><figcaption>Obra terminada</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="simulador">
+  <div class="wrap">
+    <p class="eyebrow rv">Simulador 3D</p>
+    <h2 class="rv">Míralo antes<br>de que empecemos.</h2>
+    <p class="lead rv">Ajusta las medidas, gira la vista y acerca o aleja el terreno con el zoom. Te damos una idea del volumen y de los viajes; el presupuesto final lo confirmamos en el terreno.</p>
+
+    <div class="simbox rv">
+      <div class="tabs" role="tablist">
+        <button class="tab on" type="button" role="tab" aria-selected="true" data-m="exc">Excavación</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-m="hid">Hidrosiembra</button>
+      </div>
+
+      <div class="stage">
+        <canvas id="cv" role="img" aria-label="Simulador 3D del trabajo"></canvas>
+        <div class="views">
+          <button type="button" class="on" data-v="aer">Aérea</button>
+          <button type="button" data-v="lat">Lateral</button>
+          <button type="button" data-v="cut">Corte</button>
+        </div>
+        <div class="hint" id="hint">Arrastra para girar · usa la rueda para acercar o alejar</div>
+        <div class="nogl" id="nogl" hidden>Tu navegador no puede mostrar el 3D, pero el cálculo de abajo sigue funcionando.</div>
+      </div>
+
+      <div class="ctrl">
+        <label class="sl" for="sm-Z">Zoom <output id="o-Z"></output></label>
+        <input id="sm-Z" type="range" min="0.5" max="3" step="0.1" value="1" aria-label="Acercar o alejar la vista 3D">
+      </div>
+
+      <!-- Controles: excavación -->
+      <div class="ctrl" id="c-exc">
+        <label class="sl" for="sm-shape">Forma de la excavación</label>
+        <select id="sm-shape">
+          <option value="rect">Rectangular</option>
+          <option value="L">En L</option>
+        </select>
+        <div class="ctrl" id="c-arm" hidden>
+          <label class="sl" for="sm-AW">Ancho de los brazos <output id="o-AW"></output></label>
+          <input id="sm-AW" type="range" min="1" max="100" step="1" value="10">
+        </div>
+        <label class="sl" for="sm-L">Largo <output id="o-L"></output></label>
+        <input id="sm-L" type="range" min="1" max="100" step="1" value="50">
+        <label class="sl" for="sm-W">Ancho <output id="o-W"></output></label>
+        <input id="sm-W" type="range" min="1" max="100" step="1" value="50">
+        <label class="sl" for="sm-D">Profundidad <output id="o-D"></output></label>
+        <input id="sm-D" type="range" min="0.5" max="30" step="0.5" value="5">
+      </div>
+
+      <!-- Controles: hidrosiembra -->
+      <div class="ctrl" id="c-hid" hidden>
+        <label class="sl" for="sm-HL">Largo del tramo <output id="o-HL"></output></label>
+        <input id="sm-HL" type="range" min="2" max="1000" step="1" value="30">
+        <label class="sl" for="sm-HH">Altura del talud <output id="o-HH"></output></label>
+        <input id="sm-HH" type="range" min="1" max="20" step="0.5" value="4">
+        <label class="sl" for="sm-HR">Inclinación</label>
+        <select id="sm-HR">
+          <option value="0.5">64° (1H:0.5V) · Super empinado</option>
+          <option value="1">45° (1H:1V) · muy empinado</option>
+          <option value="1.5" selected>34° (3H:2V)</option>
+          <option value="2">27° (2H:1V)</option>
+          <option value="3">18° (3H:1V) · suave</option>
+          <option value="4">8° (3H:1V) · muy suave</option>
+        </select>
+        <label class="sl" for="sm-HT">Tiempo tras la siembra <output id="o-HT">Día 0</output></label>
+        <input id="sm-HT" type="range" min="0" max="60" step="1" value="0">
+      </div>
+
+      <div class="res" id="res"></div>
+
+      <div class="btns">
+        <a class="btn btn-wa" id="simwa" href="#" target="_blank" rel="noopener">Pedir presupuesto con estos datos</a>
+        <button class="btn btn-ghost" id="rep" type="button">Repetir animación</button>
+      </div>
+      <p class="fine">Simulación orientativa y simplificada: el terreno real, el acceso y el tipo de suelo cambian las cifras. Para trabajos fuera de estos rangos, escríbenos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <p class="eyebrow rv">Cómo trabajamos</p>
+    <h2 class="rv">Simple y sin sorpresas.</h2>
+    <div class="steps">
+      <div class="step rv"><b>1</b><h3>Nos cuentas</h3><p>Escríbenos por WhatsApp con fotos o la ubicación del terreno.</p></div>
+      <div class="step rv d1"><b>2</b><h3>Presupuesto</h3><p>Valoramos el trabajo y te pasamos un precio claro.</p></div>
+      <div class="step rv d2"><b>3</b><h3>Ejecución</h3><p>Vamos con la maquinaria y dejamos el terreno como acordamos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Contacto</p>
+    <h2 class="rv">¿Tienes un terreno<br>que trabajar?</h2>
+    <p class="lead rv">Cuéntanos qué necesitas y te respondemos lo antes posible.</p>
+
+    <form class="box rv" id="f">
+      <label for="n">Nombre</label>
+      <input id="n" required autocomplete="name">
+      <label for="s">Qué necesitas</label>
+      <select id="s">
+        <option>Excavación / zanjas</option>
+        <option>Hidrosiembra</option>
+        <option>Perfilado de taludes</option>
+        <option>Nivelación / explanación</option>
+        <option>Transporte de tierras</option>
+        <option>Limpieza / desbroce</option>
+        <option>Otro</option>
+      </select>
+      <label for="m">Detalles (ubicación, tamaño aproximado…)</label>
+      <textarea id="m"></textarea>
+      <button class="btn btn-wa" type="submit">Enviar por WhatsApp</button>
+    </form>
+    <p class="alt">O escríbenos a <a data-mail href="#"></a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> ECOTALUD · Movimiento de tierras e hidrosiembra en toda España</div>
+</footer>
+
+<a class="fab" data-wa href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.8-.1 1.3z"/></svg>
+</a>
+
+<script>
+/* ===== EDITA SOLO ESTO ===== */
+const CONFIG = {
+  whatsapp: "34607017619",          // con prefijo, sin + ni espacios (España = 34)
+  email:    "itopernestoarillo@gmail.com",
+  mensaje:  "Hola, quería pedir presupuesto para un trabajo de movimiento de tierras.",
+
+  /* --- Simulador 3D --- */
+  dumper_m3:     3,     // capacidad de TU dumper en m³ (para calcular los viajes)
+  camion_m3:     15,    // capacidad de un camión basculante en m³ (para obras grandes)
+  esponjamiento: 1.25,  // la tierra excavada ocupa ~25 % más (valor genérico; ajústalo a tu terreno)
+  precio_m3:     0,     // €/m³ excavación. Déjalo en 0 para NO mostrar precio al cliente
+  precio_m2:     0      // €/m² hidrosiembra. Déjalo en 0 para NO mostrar precio al cliente
+};
+/* =========================== */
+
+const wa = "https://wa.me/" + CONFIG.whatsapp + "?text=";
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = wa + encodeURIComponent(CONFIG.mensaje);
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.querySelectorAll("[data-mail]").forEach(a => {
+  a.href = "mailto:" + CONFIG.email; a.textContent = CONFIG.email;
+});
+document.getElementById("y").textContent = new Date().getFullYear();
+
+/* Formulario -> abre WhatsApp con el mensaje armado (sin servidor) */
+document.getElementById("f").addEventListener("submit", e => {
+  e.preventDefault();
+  const t = "Hola, soy " + n.value + ". Necesito: " + s.value + "." + (m.value ? "\nDetalles: " + m.value : "");
+  window.open(wa + encodeURIComponent(t), "_blank", "noopener");
+});
+
+/* Revelado al scroll: un solo observer, deja de observar cada elemento al mostrarlo */
+const io = new IntersectionObserver((es, o) => {
+  es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("on"); o.unobserve(x.target); } });
+}, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+/* Borde en la barra al hacer scroll */
+const h = document.getElementById("top");
+addEventListener("scroll", () => h.classList.toggle("scrolled", scrollY > 8), { passive: true });
+</script>
+<script>
+/* =====================================================================
+   SIMULADOR 3D v2 — WebGL2 puro, sin librerías
+   · El relieve se calcula en la GPU (excavar/mover tierra no cuesta CPU)
+   · Materiales procedurales: hierba, tierra, estratos, piedras, mulch
+   · Sombras de relieve, zoom de cámara y animación al cambiar medidas
+   Los ajustes que puedes tocar están en CONFIG, arriba del todo.
+   ===================================================================== */
+(() => {
+"use strict";
+const $ = id => document.getElementById(id);
+const cv = $("cv");
+if (!cv) return;
+
+const C = Object.assign({ dumper_m3: 3, camion_m3: 15, esponjamiento: 1.25, precio_m3: 0, precio_m2: 0 }, CONFIG);
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+const sst = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+const mix = (a, b, t) => a + (b - a) * t;
+const fmt = (n, d = 1) => n.toLocaleString("es-ES", { maximumFractionDigits: d, useGrouping: "always" });
+const wrap = a => { a %= Math.PI * 2; return a > Math.PI ? a - Math.PI * 2 : a < -Math.PI ? a + Math.PI * 2 : a; };
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ======================= SHADERS ======================= */
+const COMMON = `
+precision highp float;
+uniform float uMode, uHS, uBaseY, uHmax;      // modo (0 excavación, 1 hidrosiembra), medio lado, fondo del bloque, altura máx.
+uniform vec4 uHole;    // cx, cz, medio largo, medio ancho
+uniform vec4 uHoleB;   // profundidad, ancho del talud de pared, frente de excavación (0..1.15), brazo de excavación en L
+uniform vec4 uPile;    // x, z, altura, radio del montón
+uniform vec4 uBank;    // x0, recorrido horizontal, altura, medio largo del tramo
+uniform vec4 uSpr;     // frente de proyección (z), crecimiento 0..1
+
+float hash(vec2 p){ vec3 p3=fract(vec3(p.xyx)*.1031); p3+=dot(p3,p3.yzx+33.33); return fract((p3.x+p3.y)*p3.z); }
+float vnoise(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f);
+  return mix(mix(hash(i),hash(i+vec2(1.,0.)),f.x), mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),f.x), f.y); }
+float sst(float a,float b,float x){ float t=clamp((x-a)/(b-a),0.,1.); return t*t*(3.-2.*t); }
+float sdBox(vec2 p, vec2 b, float r){ vec2 q=abs(p)-b+r; return length(max(q,0.))+min(max(q.x,q.y),0.)-r; }
+
+float baseH(vec2 p){ return .35*(vnoise(p*.045)-.5)+.12*(vnoise(p*.19+7.)-.5); }
+
+float holeD(vec2 p, bool fine){
+  vec2 q=p-uHole.xy;
+  float en= fine ? (vnoise(p*.22)-.5)*.6+(vnoise(p*.9)-.5)*.12 : 0.;           // borde irregular
+  float s=sdBox(q,uHole.zw,min(2.,.25*min(uHole.z,uHole.w)));
+  if(uHoleB.w>0.){
+    float arm=min(uHoleB.w,2.*min(uHole.z,uHole.w));
+    float r=min(.35,.1*arm);
+    float along=sdBox(q-vec2(0.,-uHole.w+.5*arm),vec2(uHole.z,.5*arm),r);
+    float across=sdBox(q-vec2(-uHole.z+.5*arm,0.),vec2(.5*arm,uHole.w),r);
+    s=min(along,across);
+  }
+  s+=en;                                                                       // <0 dentro
+  float t=sst(-.5*uHoleB.y,.5*uHoleB.y,-s);                                      // pared inclinada
+  float lx=(q.x+uHole.z)/(2.*uHole.z);
+  float fr=1.-sst(uHoleB.z-.12,uHoleB.z,lx);                                     // la excavadora avanza en x
+  float fl= fine ? .12*(vnoise(p*.7)-.5) : 0.;                                   // suelo irregular
+  return (uHoleB.x+fl)*t*fr;
+}
+float pileH(vec2 p, bool fine){
+  float r=length(p-uPile.xy);
+  float R=uPile.w*(1.+(fine? .25*(vnoise(p*.07+3.)-.5) : 0.));
+  float k=max(1.-r/R,0.);
+  return uPile.z*pow(k,1.4)*(fine? .88+.24*vnoise(p*.35) : 1.);
+}
+float bankH(vec2 p, bool fine){
+  float xr=p.x-uBank.x, t=clamp(xr/uBank.y,0.,1.);
+  float h=uBank.z*(.85*t+.15*t*t*(3.-2.*t));
+  float rip= fine ? .25*(vnoise(vec2(p.x*.5,p.y*.12))-.5)*sin(t*3.14159) : 0.;
+  return h+rip+baseH(p)*.5;
+}
+float H(vec2 p, bool fine){ return uMode<.5 ? baseH(p)-holeD(p,fine)+pileH(p,fine) : bankH(p,fine); }
+`;
+
+const VS = `#version 300 es
+${COMMON}
+layout(location=0) in vec3 aA;      // terreno: (u,v,0) · faldón/corte: (t, abajo-arriba, borde+1)
+uniform mat4 uM;
+out vec3 vW; out vec3 vN0; out float vSurf;
+void main(){
+  float kind=aA.z; vec2 xz; float y; vec3 n=vec3(0.,1.,0.);
+  if(kind<.5){ xz=aA.xy*uHS; y=H(xz,true); vSurf=y; }
+  else{
+    float e=kind-1., t=aA.x*uHS;
+    if(e<.5){ xz=vec2(t,-uHS); n=vec3(0.,0.,-1.); }
+    else if(e<1.5){ xz=vec2(t,uHS); n=vec3(0.,0.,1.); }
+    else if(e<2.5){ xz=vec2(-uHS,t); n=vec3(-1.,0.,0.); }
+    else if(e<3.5){ xz=vec2(uHS,t); n=vec3(1.,0.,0.); }
+    else{ xz=vec2(t,0.); n=vec3(0.,0.,1.); }                 // cara del corte
+    float sf=H(xz,true); vSurf=sf;
+    y= aA.y>.5 ? sf : uBaseY;
+  }
+  vW=vec3(xz.x,y,xz.y); vN0=n;
+  gl_Position=uM*vec4(vW,1.);
+}`;
+
+const FS = `#version 300 es
+${COMMON}
+in vec3 vW; in vec3 vN0; in float vSurf;
+uniform vec3 uEye;
+uniform float uKind, uCut;
+out vec4 oC;
+
+vec3 lin(vec3 c){ return pow(c,vec3(2.2)); }
+
+// ruido fractal que se apaga solo cuando el detalle es menor que un píxel (sin moiré); con el zoom aparece más detalle
+float fbmL(vec2 p,float px,float f0){
+  float a=.5,s=0.,f=f0; vec2 q=p*f0;
+  for(int i=0;i<5;i++){
+    float fd=clamp(1.-px*f*1.5,0.,1.);
+    s+=a*mix(.5,vnoise(q),fd);
+    q=q*2.03+vec2(17.1,9.2); f*=2.03; a*=.5;
+  }
+  return s/.96875;
+}
+float bumpF(vec2 p,float px,float f){ return fbmL(p,px,f)+.4*fbmL(p+11.3,px,f*3.7); }
+vec2 bumpG(vec2 p,float px,float f,float amp){
+  float e=max(px,.004), b0=bumpF(p,px,f);
+  return vec2(bumpF(p+vec2(e,0.),px,f)-b0, bumpF(p+vec2(0.,e),px,f)-b0)/e*amp;
+}
+float stones(vec2 p,float px,float f){ return sst(.84,.88,vnoise(p*f))*clamp(1.-px*f*1.5,0.,1.); }
+
+float shadowAt(vec3 P,vec3 Ld){
+  float sc=uHS/13., t=.3*sc, res=1.;
+  for(int i=0;i<26;i++){
+    vec3 q=P+Ld*t;
+    res=min(res,7.*(q.y-H(q.xz,false))/t);
+    t*=1.17;
+    if(res<.02||q.y>uHmax+1.) break;
+  }
+  return clamp(res,0.,1.);
+}
+
+void main(){
+  float px=max(length(dFdx(vW)),length(dFdy(vW)));
+  if(uCut>.5 && vW.z>.01) discard;
+  vec2 p=vW.xz;
+  vec3 Ld=normalize(vec3(.55,.72,.42)), Vv=normalize(uEye-vW);
+  vec3 n, alb; float shin=10., spc=0., ao=1., sh=1.;
+  vec3 stone=lin(vec3(.55,.52,.47));
+
+  if(uKind<.5){
+    float e=max(px*.8,.03);
+    float hx=H(p+vec2(e,0.),true)-H(p-vec2(e,0.),true);
+    float hz=H(p+vec2(0.,e),true)-H(p-vec2(0.,e),true);
+    n=normalize(vec3(-hx,2.*e,-hz));
+
+    if(uMode<.5){
+      // ---------- EXCAVACIÓN ----------
+      float dh=holeD(p,true), pl=pileH(p,true);
+      float inH=clamp(dh/.25,0.,1.), pm=clamp(pl/.3,0.,1.);
+      float g1=fbmL(p,px,.35);
+      vec3 grass=mix(lin(vec3(.43,.40,.21)),lin(vec3(.25,.35,.13)),g1);          // hierba seca
+      grass*=1.+(vnoise(p*22.)-.5)*.55*clamp(1.-px*22.*1.5,0.,1.);                  // briznas
+      vec3 soil=lin(vec3(.40,.28,.18));
+      vec3 natural=mix(grass,soil*.9,sst(.64,.8,fbmL(p,px,.1)));
+      // estratos de la tierra excavada
+      float dep=-vW.y+(fbmL(p,px,.15)-.5)*.9;
+      vec3 st=mix(lin(vec3(.25,.18,.11)),lin(vec3(.52,.36,.21)),sst(.2,.6,dep));
+      st=mix(st,lin(vec3(.43,.37,.30)),sst(1.8,2.6,dep));
+      st=mix(st,lin(vec3(.40,.34,.27)),sst(4.5,6.,dep));
+      st*=1.+.06*sin(dep*3.1+fbmL(p,px,.2)*5.);
+      st*=.82+.36*fbmL(p,px,2.2);
+      float stn=stones(p,px,5.1);
+      st=mix(st,stone,stn*.7);
+      float dfrac=clamp(dh/max(uHoleB.x,.1),0.,1.);
+      st*=1.-.45*sst(.55,1.,dfrac)*.8;                                            // húmedo en el fondo
+      vec3 pile=mix(lin(vec3(.58,.42,.27)),lin(vec3(.45,.32,.20)),fbmL(p,px,.6));
+      pile*=.8+.4*fbmL(p,px,3.);
+      pile=mix(pile,stone,stn*.6);
+      alb=mix(natural,st,inH); alb=mix(alb,pile,pm);
+      float amp=.07*mix(.3,1.,max(inH,pm));
+      vec2 bg=bumpG(p,px,1.6,amp); n=normalize(n+vec3(-bg.x,0.,-bg.y));
+      ao=1.-.5*dfrac*inH;
+      shin=8.+22.*sst(.55,1.,dfrac); spc=.04+.16*sst(.55,1.,dfrac);
+    } else {
+      // ---------- HIDROSIEMBRA ----------
+      float xr=p.x-uBank.x, run=uBank.y, g=uSpr.y;
+      float rill=vnoise(vec2(p.y*2.2,p.x*.25));
+      vec3 soil=mix(lin(vec3(.41,.29,.19)),lin(vec3(.31,.23,.16)),fbmL(p,px,.5));
+      soil*=(.93+.14*rill)*(.78+.44*fbmL(p,px,2.5));
+      soil=mix(soil,stone,stones(p,px,4.7)*.7);
+      float m=clamp((uBank.w-abs(p.y))/.5,0.,1.)*clamp((uSpr.x-p.y)/.9,0.,1.)*clamp(xr/.6,0.,1.)*clamp((run-xr)/.6,0.,1.);
+      m=sst(.25,.75,m+(vnoise(p*1.3)-.5)*.5)*sst(0.,.1,m);                           // bordes irregulares
+      vec3 slurry=mix(lin(vec3(.14,.52,.34)),lin(vec3(.25,.62,.42)),fbmL(p,px,1.2));
+      slurry=mix(slurry,lin(vec3(.78,.75,.55)),sst(.7,.85,vnoise(p*14.))*clamp(1.-px*14.*1.5,0.,1.)*.5);   // fibras de mulch
+      float cov=sst(0.,1.,g*1.5-fbmL(p,px,.9)*.7);                                   // nascencia irregular
+      vec3 gr=mix(lin(vec3(.11,.27,.06)),lin(vec3(.32,.50,.13)),fbmL(p,px,1.8));
+      gr*=1.+(vnoise(p*28.)-.5)*.7*clamp(1.-px*28.*1.5,0.,1.);
+      vec3 sprayed=mix(slurry*mix(1.,.8,g),gr,cov);
+      alb=mix(soil,sprayed,m);
+      vec2 bg=bumpG(p,px,1.6,.07*mix(1.,.5,m*cov)); n=normalize(n+vec3(-bg.x,0.,-bg.y));
+      spc=.3*m*(1.-g); shin=40.;
+    }
+  } else {
+    // ---------- FALDÓN Y CORTE: capas de suelo ----------
+    n=normalize(vN0);
+    vec2 q=vec2(abs(vN0.z)>.5 ? vW.x : vW.z, vW.y);
+    float dep=(uMode<.5 ? -vW.y : uBank.z-vW.y)+(fbmL(q,px,.12)-.5)*1.1;
+    vec3 st=mix(lin(vec3(.25,.18,.11)),lin(vec3(.52,.36,.21)),sst(.3,.6,dep));
+    st=mix(st,lin(vec3(.43,.37,.30)),sst(1.9,2.5,dep));
+    st=mix(st,lin(vec3(.40,.34,.27)),sst(4.6,5.6,dep));
+    st*=1.+.06*sin(dep*3.1+fbmL(q,px,.2)*5.);
+    st=mix(st,lin(vec3(.36,.36,.34)),sst(11.,14.,dep));                          // grava/roca en profundidad
+    st*=.8+.4*fbmL(q,px,2.2);
+    st=mix(st,stone,stones(q,px,4.)*.7);
+    if(uMode<.5 && vW.y>.05) st=mix(st,lin(vec3(.52,.38,.25)),.8);               // montón de tierra suelta
+    alb=st;
+    vec2 bg=bumpG(q,px,1.2,.06);
+    vec3 t1= abs(vN0.z)>.5 ? vec3(1.,0.,0.) : vec3(0.,0.,1.);
+    n=normalize(n-(bg.x*t1+bg.y*vec3(0.,1.,0.)));
+    ao=mix(1.,.6,sst(0.,uHS*.35,vSurf-vW.y));
+  }
+
+  float ndl=max(dot(n,Ld),0.);
+  if(uKind<.5 && ndl>0.) sh=shadowAt(vW+n*.04*uHS/13.,Ld);
+  vec3 sun=vec3(1.,.92,.78)*1.65, sky=vec3(.40,.55,.85)*.42;
+  vec3 hv=normalize(Ld+Vv);
+  vec3 col=alb*(sun*ndl*sh+sky*(.35+.65*(.5+.5*n.y))*ao)+sun*spc*pow(max(dot(n,hv),0.),shin)*sh*ndl;
+  col=col*(2.51*col+.03)/(col*(2.43*col+.59)+.14);                                // tono (ACES)
+  col=pow(clamp(col,0.,1.),vec3(1./2.2));
+  oC=vec4(col,1.);
+}`;
+
+/* ======================= ESTADO ======================= */
+const S   = { L: 50, W: 50, D: 5, arm: 10, hL: 30, hh: 4, hr: 1.5 };                          // objetivo (deslizadores)
+const cur = { L: 50, W: 50, D: 5, arm: 10, hL: 30, hh: 4, hr: 1.5, exP: 0, hidP: 0, hidG: 0 }; // lo que se ve (se anima)
+const P   = { mode: "exc", view: "aer", shape: "rect" };
+const cam = { yaw: .55, pitch: .85, cf: 0, zoom: 1, tyaw: .55, tpitch: .85, tcf: 0, tzoom: 1 };
+const defYaw = () => P.mode === "exc" ? .55 : -1.15;
+const TWEEN = ["L", "W", "D", "arm", "hL", "hh", "hr"];
+const excavationArea = (L, W, arm) => P.shape === "L" ? L * arm + W * arm - arm * arm : L * W;
+
+/* Disposición de la escena según las medidas actuales: se reescala sola */
+function layout() {
+  if (P.mode === "exc") {
+    const { L, W, D, arm, exP: p } = cur, vl = excavationArea(L, W, arm) * D * C.esponjamiento, a = 1.4;
+    const ph = clamp(.5 * Math.cbrt(vl), .3, 10);
+    const R = Math.sqrt(vl * (a + 1) * (a + 2) / (2 * Math.PI * ph));
+    const hx = -(3 + 1.85 * R) / 2, pX = hx + L / 2 + 3 + .85 * R;
+    const HS = 1.12 * Math.max(Math.abs(hx - L / 2), pX + R, W / 2 + 4, R * 1.05) + 3;
+    const baseY = -Math.max(.28 * HS + 3, D + 3);
+    return { HS, baseY, hmax: ph + 1, hole: [hx, 0, L / 2, W / 2], holeB: [D, .4 + .35 * D, p * 1.15, P.shape === "L" ? arm : 0],
+             pile: [pX, 0, ph * p, R * (.4 + .6 * Math.sqrt(p))], bank: [0, 1, 0, 0], spr: [0, 0, 0, 0],
+             tyA: -D * .3, tyC: baseY * .45 };
+  }
+  const run = cur.hh * cur.hr, hl = cur.hL / 2;
+  const HS = Math.max(1.25 * hl + 4, .8 * run + 6, cur.hh * 1.2 + 6), baseY = -Math.max(.28 * HS + 3, 3);
+  return { HS, baseY, hmax: cur.hh + 1, hole: [0, 0, 1, 1], holeB: [0, 1, 0, 0], pile: [0, 0, 0, 1],
+           bank: [-run / 2, run, cur.hh, hl], spr: [-hl - .9 + cur.hidP * (2 * hl + 1.8), cur.hidG, 0, 0],
+           tyA: cur.hh * .35, tyC: (cur.hh + baseY) / 2 };
+}
+
+/* ======================= WEBGL2 ======================= */
+let gl = null, prog = null, vaoT = null, vaoS = null, nT = 0, nS = 0, U = {};
+const NT = 360;
+function initGL() {
+  try {
+    gl = cv.getContext("webgl2", { antialias: true, alpha: true, powerPreference: "high-performance" });
+    if (!gl) return false;
+    const mk = (t, s) => { const o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
+    prog = gl.createProgram();
+    gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+    gl.useProgram(prog);
+    ["uM", "uEye", "uMode", "uHS", "uBaseY", "uHmax", "uHole", "uHoleB", "uPile", "uBank", "uSpr", "uKind", "uCut"]
+      .forEach(n => { U[n] = gl.getUniformLocation(prog, n); });
+
+    const mesh = (verts, idx) => {
+      const vao = gl.createVertexArray(); gl.bindVertexArray(vao);
+      const vb = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, vb); gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
+      gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
+      const ib = gl.createBuffer(); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idx, gl.STATIC_DRAW);
+      return vao;
+    };
+    const V = NT + 1;
+    const tv = new Float32Array(V * V * 3), ti = new Uint32Array(NT * NT * 6);
+    for (let j = 0; j < V; j++) for (let i = 0; i < V; i++) { const k = (j * V + i) * 3; tv[k] = -1 + 2 * i / NT; tv[k + 1] = -1 + 2 * j / NT; }
+    let q = 0;
+    for (let j = 0; j < NT; j++) for (let i = 0; i < NT; i++) { const k = j * V + i; ti[q++] = k; ti[q++] = k + V; ti[q++] = k + 1; ti[q++] = k + 1; ti[q++] = k + V; ti[q++] = k + V + 1; }
+    vaoT = mesh(tv, ti); nT = ti.length;
+    const sv = new Float32Array(5 * V * 2 * 3), si = new Uint32Array(5 * NT * 6);
+    let a = 0, b = 0;
+    for (let e = 0; e < 5; e++) {
+      const base = e * V * 2;
+      for (let k = 0; k < V; k++) for (let s = 0; s < 2; s++) { sv[a++] = -1 + 2 * k / NT; sv[a++] = s; sv[a++] = e + 1; }
+      for (let k = 0; k < NT; k++) { const t = base + 2 * k; si[b++] = t; si[b++] = t + 1; si[b++] = t + 2; si[b++] = t + 2; si[b++] = t + 1; si[b++] = t + 3; }
+    }
+    vaoS = mesh(sv, si); nS = si.length;
+    gl.enable(gl.DEPTH_TEST);
+    return true;
+  } catch (e) { console.error("Simulador 3D:", e); gl = null; return false; }
+}
+
+const persp = (f, a, n, fa) => { const t = 1 / Math.tan(f / 2); return [t / a, 0, 0, 0, 0, t, 0, 0, 0, 0, (fa + n) / (n - fa), -1, 0, 0, 2 * fa * n / (n - fa), 0]; };
+function look(e, c) {
+  let zx = e[0] - c[0], zy = e[1] - c[1], zz = e[2] - c[2], l = Math.hypot(zx, zy, zz); zx /= l; zy /= l; zz /= l;
+  let xx = zz, xz = -zx; l = Math.hypot(xx, xz); xx /= l; xz /= l;
+  const yx = zy * xz, yy = zz * xx - zx * xz, yz = -zy * xx;
+  return [xx, yx, zx, 0, 0, yy, zy, 0, xz, yz, zz, 0, -(xx * e[0] + xz * e[2]), -(yx * e[0] + yy * e[1] + yz * e[2]), -(zx * e[0] + zy * e[1] + zz * e[2]), 1];
+}
+function mul(a, b) { const o = new Float32Array(16); for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) { let s = 0; for (let k = 0; k < 4; k++) s += a[k * 4 + r] * b[c * 4 + k]; o[c * 4 + r] = s; } return o; }
+
+/* ======================= DIBUJO ======================= */
+let qf = 1;
+function drawScene(M, eye, Ly) {
+  gl.uniformMatrix4fv(U.uM, false, M);
+  gl.uniform3fv(U.uEye, eye);
+  gl.uniform1f(U.uMode, P.mode === "exc" ? 0 : 1);
+  gl.uniform1f(U.uHS, Ly.HS); gl.uniform1f(U.uBaseY, Ly.baseY); gl.uniform1f(U.uHmax, Ly.hmax);
+  gl.uniform4fv(U.uHole, Ly.hole); gl.uniform4fv(U.uHoleB, Ly.holeB); gl.uniform4fv(U.uPile, Ly.pile);
+  gl.uniform4fv(U.uBank, Ly.bank); gl.uniform4fv(U.uSpr, Ly.spr);
+  gl.uniform1f(U.uCut, P.view === "cut" ? 1 : 0);
+  gl.uniform1f(U.uKind, 0); gl.bindVertexArray(vaoT); gl.drawElements(gl.TRIANGLES, nT, gl.UNSIGNED_INT, 0);
+  gl.uniform1f(U.uKind, 1); gl.bindVertexArray(vaoS); gl.drawElements(gl.TRIANGLES, nS, gl.UNSIGNED_INT, 0);
+}
+function draw(Ly) {
+  const w = cv.width, h = cv.height;
+  gl.viewport(0, 0, w, h); gl.disable(gl.SCISSOR_TEST); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  const dist = Ly.HS * 3.3 * mix(1, .85, cam.cf) / cam.zoom, ty = mix(Ly.tyA, Ly.tyC, cam.cf), cp = Math.cos(cam.pitch);
+  const eye = [dist * cp * Math.sin(cam.yaw), ty + dist * Math.sin(cam.pitch), dist * cp * Math.cos(cam.yaw)];
+  const M = mul(persp(.7, w / h, dist * .05, dist * 6), look(eye, [0, ty, 0]));
+  drawScene(M, eye, Ly);
+}
+/* ======================= BUCLE ======================= */
+let raf = 0, vis = false, started = false, anim = null, last = 0, slow = 0;
+const need = () => { if (!raf) raf = requestAnimationFrame(frame); };
+function frame(t) {
+  raf = 0;
+  if (!gl || !vis) return;
+  const dt = last ? Math.min((t - last) / 1000, .1) : .016;
+  if (last) { if (t - last > 38) slow++; else slow = Math.max(0, slow - 1); if (slow > 25 && qf > .6) { qf = Math.max(.6, qf - .2); slow = 0; resize(); } }
+  last = t;
+  let more = false;
+  if (anim) {
+    if (anim.t0 == null) anim.t0 = t;
+    const k = clamp((t - anim.t0) / anim.dur, 0, 1);
+    anim.set(sst(0, 1, k));
+    if (k >= 1) { const d = anim.done; anim = null; if (d) d(); }
+  }
+  const kt = RM ? 1 : 1 - Math.exp(-dt * 6.5);                       // transición suave al cambiar medidas
+  for (const key of TWEEN) { const d = S[key] - cur[key]; if (Math.abs(d) > 1e-3 * Math.max(1, Math.abs(S[key]))) { cur[key] += d * kt; more = true; } else cur[key] = S[key]; }
+  const ke = RM ? 1 : .2;
+  for (const [a, b] of [["yaw", "tyaw"], ["pitch", "tpitch"], ["cf", "tcf"], ["zoom", "tzoom"]]) { const d = cam[b] - cam[a]; if (Math.abs(d) > .002) { cam[a] += d * ke; more = true; } else cam[a] = cam[b]; }
+  const Ly = layout();
+  draw(Ly);
+  if (more || anim || drag) need(); else last = 0;
+}
+function play(dur, set, done) {
+  if (RM || !gl) { set(1); if (done) done(); need(); return; }
+  anim = { dur, set, done, t0: null }; set(0); need();
+}
+/* ======================= RESULTADOS ======================= */
+const card = (b, s) => "<div><b>" + b + "</b><span>" + s + "</span></div>";
+function results() {
+  let html, msg;
+  if (P.mode === "exc") {
+    const { L, W, D, arm } = S, v = excavationArea(L, W, arm) * D, vl = v * C.esponjamiento, tr = Math.ceil(vl / C.dumper_m3), cam3 = Math.ceil(vl / C.camion_m3);
+    html = card(fmt(v, 0) + " m³", "Volumen a excavar") +
+           card(fmt(vl, 0) + " m³", "Tierra suelta a retirar (≈ +" + Math.round((C.esponjamiento - 1) * 100) + " %)") +
+           card("≈ " + fmt(tr, 0), "Viajes de dumper de " + fmt(C.dumper_m3) + " m³") +
+           card("≈ " + fmt(cam3, 0), "Camiones de " + fmt(C.camion_m3) + " m³");
+    if (C.precio_m3 > 0) html += card("≈ " + fmt(v * C.precio_m3, 0) + " €", "Estimación orientativa");
+    msg = "Hola, he usado el simulador de la web. Excavación " + (P.shape === "L" ? "en L" : "rectangular") + " de " + fmt(L) + " × " + fmt(W) + " m" + (P.shape === "L" ? ", con brazos de " + fmt(arm) + " m" : "") + " y " + fmt(D, 2) + " m de profundidad (≈ " + fmt(v, 0) + " m³; ≈ " + fmt(cam3, 0) + " camiones de " + fmt(C.camion_m3) + " m³). Quisiera presupuesto.";
+  } else {
+    const { hL: L, hh: h, hr: r } = S, sl = h * Math.sqrt(1 + r * r), area = L * sl, ang = Math.round(Math.atan(1 / r) * 180 / Math.PI);
+    html = card(fmt(area, 0) + " m²", "Superficie a hidrosembrar") +
+           card(fmt(sl) + " m", "Longitud del talud en pendiente") +
+           card(ang + "°", "Inclinación del talud");
+    if (C.precio_m2 > 0) html += card("≈ " + fmt(area * C.precio_m2, 0) + " €", "Estimación orientativa");
+    msg = "Hola, he usado el simulador de la web. Hidrosiembra de un talud de " + fmt(L) + " m de largo y " + fmt(h) + " m de altura, inclinación " + ang + "° (≈ " + fmt(area, 0) + " m²). Quisiera presupuesto.";
+  }
+  $("res").innerHTML = html;
+  $("simwa").href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
+}
+function readInputs() {
+  S.L = +$("sm-L").value; S.W = +$("sm-W").value; S.D = +$("sm-D").value;
+  const armInput = $("sm-AW"), maxArm = Math.max(1, Math.floor(Math.min(S.L, S.W) * .8));
+  armInput.max = maxArm;
+  if (+armInput.value > maxArm) armInput.value = maxArm;
+  S.arm = +armInput.value;
+  S.hL = +$("sm-HL").value; S.hh = +$("sm-HH").value; S.hr = +$("sm-HR").value;
+  $("o-L").textContent = fmt(S.L) + " m"; $("o-W").textContent = fmt(S.W) + " m"; $("o-D").textContent = fmt(S.D, 2) + " m";
+  $("o-AW").textContent = fmt(S.arm) + " m";
+  $("o-HL").textContent = fmt(S.hL) + " m"; $("o-HH").textContent = fmt(S.hh) + " m";
+}
+function syncTime() { const d = Math.round(cur.hidG * 60); $("sm-HT").value = d; $("o-HT").textContent = "Día " + d; }
+function setZoomUI() { $("sm-Z").value = cam.tzoom; $("o-Z").textContent = "×" + fmt(cam.tzoom, 1); }
+
+/* ======================= ANIMACIONES ======================= */
+function runExc() { cur.exP = 0; play(3400, v => { cur.exP = v; }); }
+function runHid() {
+  cur.hidP = 0; cur.hidG = 0; syncTime();
+  play(2800, v => { cur.hidP = v; }, () => { play(4200, v => { cur.hidG = v; syncTime(); }); });
+}
+const runCurrent = () => P.mode === "exc" ? runExc() : runHid();
+
+function setView(v) {
+  const prev = P.view; P.view = v;
+  cam.tpitch = { aer: .85, lat: .3, cut: .2 }[v]; cam.tcf = v === "cut" ? 1 : 0;
+  if (v === "cut") { cam.yaw = wrap(cam.yaw); cam.tyaw = 0; } else if (prev === "cut") cam.tyaw = defYaw();
+  document.querySelectorAll(".views button[data-v]").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+  need();
+}
+function setMode(m) {
+  P.mode = m; anim = null;
+  document.querySelectorAll(".tab").forEach(t => { const on = t.dataset.m === m; t.classList.toggle("on", on); t.setAttribute("aria-selected", on); });
+  $("c-exc").hidden = m !== "exc"; $("c-hid").hidden = m !== "hid";
+  $("rep").textContent = m === "exc" ? "Repetir excavación" : "Aplicar hidrosiembra";
+  cam.yaw = wrap(cam.yaw); P.view = "aer"; cam.tyaw = defYaw(); setView("aer");
+  results();
+  if (started && gl) runCurrent(); else need();
+}
+
+/* ======================= EVENTOS ======================= */
+["sm-L", "sm-W", "sm-D", "sm-AW", "sm-HL", "sm-HH", "sm-HR"].forEach(id => $(id).addEventListener("input", () => { readInputs(); results(); need(); }));
+$("sm-shape").addEventListener("change", e => {
+  P.shape = e.target.value;
+  $("c-arm").hidden = P.shape !== "L";
+  readInputs(); results(); need();
+});
+$("sm-HT").addEventListener("input", e => { anim = null; cur.hidP = 1; cur.hidG = +e.target.value / 60; syncTime(); need(); });
+$("sm-Z").addEventListener("input", e => { cam.tzoom = +e.target.value; setZoomUI(); need(); });
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => setMode(b.dataset.m)));
+document.querySelectorAll(".views button[data-v]").forEach(b => b.addEventListener("click", () => setView(b.dataset.v)));
+$("rep").addEventListener("click", () => { if (gl) runCurrent(); });
+
+let drag = null;
+cv.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, yaw: cam.tyaw, pitch: cam.tpitch }; cv.setPointerCapture(e.pointerId); $("hint").style.opacity = 0; });
+cv.addEventListener("pointermove", e => {
+  if (!drag) return;
+  let y = drag.yaw - (e.clientX - drag.x) * .008; if (P.view === "cut") y = clamp(y, -.7, .7);
+  cam.tyaw = y;
+  if (e.pointerType === "mouse" && P.view !== "cut") cam.tpitch = clamp(drag.pitch + (e.clientY - drag.y) * .006, .15, 1.2);
+  need();
+});
+["pointerup", "pointercancel", "lostpointercapture"].forEach(n => cv.addEventListener(n, () => { drag = null; }));
+cv.addEventListener("wheel", e => {
+  e.preventDefault();
+  cam.tzoom = clamp(cam.tzoom * (e.deltaY < 0 ? 1.1 : .9), .5, 3);
+  setZoomUI();
+  need();
+}, { passive: false });
+
+cv.addEventListener("webglcontextlost", e => { e.preventDefault(); gl = null; });
+cv.addEventListener("webglcontextrestored", () => { if (initGL()) need(); });
+
+const stage = cv.parentElement;
+function resize() {
+  const d = Math.min(window.devicePixelRatio || 1, 2) * qf;
+  const w = Math.max(2, Math.round(stage.clientWidth * d)), h = Math.max(2, Math.round(stage.clientHeight * d));
+  if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
+  need();
+}
+new ResizeObserver(resize).observe(stage);
+
+/* El 3D no se inicia hasta que el simulador entra en pantalla */
+new IntersectionObserver(es => {
+  vis = es[0].isIntersecting;
+  if (vis && !started) {
+    started = true;
+    if (initGL()) { resize(); runCurrent(); }
+    else { cv.hidden = true; $("nogl").hidden = false; $("hint").hidden = true; document.querySelectorAll(".views button").forEach(b => { b.hidden = true; }); }
+  }
+  if (vis) need();
+}, { threshold: .1 }).observe(stage);
+
+/* Arranque */
+P.shape = $("sm-shape").value;
+readInputs(); syncTime(); setZoomUI(); results();
+})();
+</script>
+</body>
+</html>
