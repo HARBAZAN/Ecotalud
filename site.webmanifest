@@ -1,6 +1,6 @@
 {
-  "name": "ecotalud",
-  "short_name": "et",
+  "name": "Ecotalud",
+  "short_name": "Ecotalud",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#100b0b",
+  "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone"
 }
